@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://f6oefd4u17d8"]
+
+[ext_resource type="Texture2D" uid="uid://cbuwxqv00204b" path="res://icon.svg" id="1_63nvm"]
+
+[node name="Sprite2D" type="Sprite2D"]
+modulate = Color(1, 0.054902, 1, 1)
+texture = ExtResource("1_63nvm")

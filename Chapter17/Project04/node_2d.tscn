@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://7d16leqcgrwa"]
+
+[ext_resource type="Texture2D" uid="uid://cdse2nju8nrj1" path="res://icon.svg" id="1_h2kll"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2mt3n"]
+size = Vector2(126, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjwmi"]
+size = Vector2(125, 127)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_in6hy"]
+size = Vector2(130, 128)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(434, 65)
+collision_mask = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+texture = ExtResource("1_h2kll")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(3, 0)
+shape = SubResource("RectangleShape2D_2mt3n")
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+position = Vector2(196, -23)
+gravity_scale = 1.66533e-16
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D2"]
+modulate = Color(0.054902, 1, 0.0705882, 1)
+position = Vector2(123, 266)
+texture = ExtResource("1_h2kll")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+position = Vector2(122.5, 267.5)
+shape = SubResource("RectangleShape2D_bjwmi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(408, 429)
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+modulate = Color(1, 0.0784314, 1, 1)
+texture = ExtResource("1_h2kll")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_in6hy")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
+polygon = PackedVector2Array(1, 505, 166, 567, 295, 504, 883, 612, 57, 607)
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D2"]
+color = Color(0.207843, 1, 0.054902, 1)
+polygon = PackedVector2Array(1, 505, 165, 565, 297, 505, 880, 611, 55, 608)

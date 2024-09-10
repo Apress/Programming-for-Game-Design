@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpp4dtkxqy8ni"]
+
+[ext_resource type="PackedScene" uid="uid://chltl4keimj3g" path="res://enemy.tscn" id="1_krekt"]
+
+[node name="Main" type="Node"]
+
+[node name="Enemy" parent="." instance=ExtResource("1_krekt")]
+position = Vector2(280, 190)
+
+[node name="Sprite2D" parent="Enemy" index="0"]
+modulate = Color(0.156863, 0.717647, 0.658824, 1)
+
+[node name="Enemy2" parent="." instance=ExtResource("1_krekt")]
+position = Vector2(747, 499)
+
+[node name="Enemy3" parent="." instance=ExtResource("1_krekt")]
+position = Vector2(386, 511)
+
+[editable path="Enemy"]

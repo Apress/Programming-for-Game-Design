@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://vodtqabm6pml"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_0cyxf"]
+[ext_resource type="PackedScene" uid="uid://vkebqwp61nvp" path="res://player.tscn" id="2_w4vu5"]
+[ext_resource type="PackedScene" uid="uid://c13p372kckta0" path="res://treasure.tscn" id="3_l22p4"]
+[ext_resource type="PackedScene" uid="uid://y3yieqrqfcuq" path="res://hud.tscn" id="4_jsy7u"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_0cyxf")
+
+[node name="Player" parent="." instance=ExtResource("2_w4vu5")]
+position = Vector2(102, 227)
+
+[node name="Treasure" parent="." instance=ExtResource("3_l22p4")]
+position = Vector2(539, 164)
+
+[node name="Treasure2" parent="." instance=ExtResource("3_l22p4")]
+position = Vector2(908, 427)
+
+[node name="Treasure3" parent="." instance=ExtResource("3_l22p4")]
+position = Vector2(449, 553)
+
+[node name="HUD" parent="." instance=ExtResource("4_jsy7u")]
+
+[connection signal="update_display" from="Player" to="." method="_on_player_update_display"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs6uqvtdq35a6"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_eodjt"]
+[ext_resource type="PackedScene" uid="uid://cee14yy2eq0lm" path="res://obstacle.tscn" id="2_jbsdw"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_eodjt")
+obstacle_scene = ExtResource("2_jbsdw")

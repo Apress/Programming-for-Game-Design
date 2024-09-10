@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://1gbk22l2tckf"]
+
+[ext_resource type="Script" path="res://move_me.gd" id="1_781kq"]
+[ext_resource type="Texture2D" uid="uid://babmvu8bi2awe" path="res://icon.svg" id="1_wv44t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ip40q"]
+size = Vector2(126, 128)
+
+[node name="MoveMe" type="RigidBody2D"]
+gravity_scale = 1.66533e-16
+script = ExtResource("1_781kq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wv44t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_ip40q")
